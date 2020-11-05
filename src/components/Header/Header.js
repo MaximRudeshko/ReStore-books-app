@@ -6,9 +6,12 @@ import logo from '../../assets/img/logo.svg'
 import cart from '../../assets/img/cart.svg'
 
 import './Header.scss'
+import { useSelector } from 'react-redux';
 
 
 const Header = () => {
+
+    const {totalCount} = useSelector(state => state.cart)
     
     return (
         <header className = 'header'>
@@ -22,10 +25,9 @@ const Header = () => {
                 </Link>
                 <Link to = '/cart'>
                     <li>Корзина</li> 
-                    <span>3</span>   
+                    <span>{totalCount}</span>   
                 </Link>
             </ul>
-            
         </header>
     );
 }

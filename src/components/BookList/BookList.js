@@ -12,6 +12,9 @@ const BookList = () => {
 
     const dispatch = useDispatch()
     const {books, loading, error} = useSelector(state => state.books)
+    const cart = useSelector(state => state.cart)
+
+    console.log(cart)
 
     React.useEffect(() => {
         dispatch(booksRequested())

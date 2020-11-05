@@ -11,7 +11,7 @@ const setBooks = (items) => {
 
 const booksRequested = () => {
     return {
-        type: 'FETCH_BOOKS_REQUESTED'
+        type: 'FETCH_BOOKS_REQUEST'
     }
 }
 
@@ -22,6 +22,7 @@ const booksError = () => {
 }
 
  const fetchBooks = () => (dispatch)  =>{
+    dispatch(booksRequested())
     restoreService.getBooks()
         .then(data => {
             dispatch(setBooks(data))

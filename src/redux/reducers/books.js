@@ -14,6 +14,7 @@ export const books = (state = initialState, action) => {
         case 'FETCH_BOOKS_REQUEST':
             return {
                 ...state,
+                books: [],
                 loading:true
             }
         case 'FETCH_BOOKS_FAILURE':
