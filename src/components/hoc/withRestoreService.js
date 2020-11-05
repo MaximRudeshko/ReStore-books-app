@@ -7,12 +7,13 @@ const withRestoreService = () => (Wrapped) => {
             <RestoreConsumer>
                 {
                     (restoreService) => {
-                        <Wrapped {...props} restoreService = {restoreService}/>
+                        return <Wrapped {...props} restoreService = {restoreService}/>
                     }
                 }
             </RestoreConsumer>
         );
     }
 }
+
 
 export default withRestoreService;

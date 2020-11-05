@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo.svg'
 import cart from '../../assets/img/cart.svg'
 
+import './Header.scss'
+
 
 const Header = () => {
     
@@ -19,8 +21,8 @@ const Header = () => {
                     <li>Каталог</li>    
                 </Link>
                 <Link to = '/cart'>
-                    <img src = {cart} alt = 'cart'/>
-                    <li>Корзина</li>    
+                    <li>Корзина</li> 
+                    <span>3</span>   
                 </Link>
             </ul>
             

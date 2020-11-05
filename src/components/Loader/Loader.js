@@ -1,10 +1,13 @@
 import React from 'react';
 
-import './Loader.css'
+import './Loader.scss'
 
 const Loader = () => {
     return (
-        <div className="lds-dual-ring"></div>
+        <div className = 'loader-wrapper'>
+                    <div className="lds-dual-ring"></div>
+
+        </div>
     );
 }
 
